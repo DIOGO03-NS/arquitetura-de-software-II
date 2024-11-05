@@ -1,0 +1,27 @@
+//facade
+Classe SistemaCadastroFacade
+    Método cadastrarPaciente(dadosPaciente)
+        Validar dados do paciente
+        Registrar paciente no banco de dados
+        Gerar ID do paciente
+        Imprimir "Paciente cadastrado com sucesso"
+    FimMétodo
+FimClasse
+
+// Exemplo de uso
+cadastroFacade = new SistemaCadastroFacade()
+cadastroFacade.cadastrarPaciente(dados)
+
+
+
+//composite
+Classe Consulta
+    Método adicionarSubConsulta(subConsulta)
+        listaSubConsultas.adicionar(subConsulta)
+    FimMétodo
+    Método mostrarDetalhes()
+        Para cada subConsulta em listaSubConsultas
+            subConsulta.mostrarDetalhes()
+        FimPara
+    FimMétodo
+FimClasse
