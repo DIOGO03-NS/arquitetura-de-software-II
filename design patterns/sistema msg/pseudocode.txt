@@ -1,0 +1,35 @@
+Classe SistemaMensagens
+    Lista observadores = []
+
+    Método adicionarObservador(observador)
+        observadores.adicionar(observador)
+    FimMétodo
+
+    Método removerObservador(observador)
+        observadores.remover(observador)
+    FimMétodo
+
+    Método notificarObservadores(mensagem)
+        Para cada observador em observadores
+            observador.atualizar(mensagem)
+        FimPara
+    FimMétodo
+
+    Método novaMensagem(mensagem)
+        Salvar mensagem no sistema
+        notificarObservadores(mensagem)
+    FimMétodo
+FimClasse
+
+Classe ObservadorConcreto
+    Método atualizar(mensagem)
+        Imprimir "Nova mensagem recebida: " + mensagem
+    FimMétodo
+FimClasse
+
+// Exemplo de uso
+sistemaMensagens = new SistemaMensagens()
+observador = new ObservadorConcreto()
+
+sistemaMensagens.adicionarObservador(observador)
+sistemaMensagens.novaMensagem("Mensagem importante")
