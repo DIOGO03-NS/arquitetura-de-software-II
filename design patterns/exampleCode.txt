@@ -1,0 +1,34 @@
+Classe UsuarioFactory
+    Método criarUsuario(tipo)
+        Se tipo == "Administrador"
+            Retornar novo Administrador()
+        Senão se tipo == "UsuarioRegular"
+            Retornar novo UsuarioRegular()
+        Senão se tipo == "Convidado"
+            Retornar novo Convidado()
+        FimSe
+    FimMétodo
+FimClasse
+
+Classe Administrador
+    Método acessarPermissoes()
+        Imprimir "Acesso completo ao sistema"
+    FimMétodo
+FimClasse
+
+Classe UsuarioRegular
+    Método acessarPermissoes()
+        Imprimir "Acesso a funcionalidades limitadas"
+    FimMétodo
+FimClasse
+
+Classe Convidado
+    Método acessarPermissoes()
+        Imprimir "Acesso somente a visualização"
+    FimMétodo
+FimClasse
+
+// Exemplo de uso
+usuarioFactory = new UsuarioFactory()
+usuario = usuarioFactory.criarUsuario("Administrador")
+usuario.acessarPermissoes() // Saída: Acesso completo ao sistema
